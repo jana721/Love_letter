@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Jana</title>
+<style>
+body{
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#1e1e2f,#2b2b45);
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+}
+form{
+  background: rgba(255,255,255,0.1);
+  padding:30px;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  width:300px;
+}
+input, textarea{
+  margin-bottom:15px;
+  padding:10px;
+  border-radius:5px;
+  border:none;
+  font-size:16px;
+}
+input[type="submit"]{
+  background:#ff4d6d;
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+}
+input[type="submit"]:hover{
+  background:#e91e63;
+}
+</style>
+</head>
+<body>
+
+<form id="contactForm">
+  <h2>Contact Jana 💌</h2>
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+  <input type="submit" value="Send Message">
+</form>
+
+<script>
+// منع إعادة تحميل الصفحة عند الضغط على Submit
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  alert("شكراً! تم إرسال رسالتك بنجاح ❤️");
+  this.reset();
+});
+</script>
+
+</body>
+</html>
